@@ -16,7 +16,7 @@ namespace ApplicationForStudentAdmission
         public string DepartmentID{get;set;}
         public DateTime AdmissionDate{get;set;}
 
-        public AdmissionStatus Admissionstatus{get;set;}
+        
 
         public AdmissionStatus AdmissionStatus{get;set;}
 
@@ -28,7 +28,7 @@ namespace ApplicationForStudentAdmission
             DepartmentID=departmentID;
             AdmissionDate=admissionDate;
 
-            Admissionstatus=status;
+
 
             AdmissionStatus=status;
 
