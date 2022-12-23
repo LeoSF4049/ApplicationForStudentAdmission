@@ -51,7 +51,9 @@ namespace ApplicationForStudentAdmission
             string fatherName = Console.ReadLine();
             
             System.Console.Write("Enter your gender (Male/Female/Transgender) : ");
-            Gender gender = Enum.Parse<Gender>(Console.ReadLine());
+
+
+            Gender gender = Enum.Parse<Gender>(Console.ReadLine(),true);
 
             System.Console.Write("Enter your DOB in (dd/mm/yyyy) : ");
             DateTime DOB = DateTime.ParseExact(Console.ReadLine(), "dd/MM/yyyy", null);
@@ -68,7 +70,10 @@ namespace ApplicationForStudentAdmission
             System.Console.Write("Enter maths mark : ");
             int maths = int.Parse(Console.ReadLine());
 
-            Student student = new Student(name, fatherName, DOB, gender, phoneNumber, physics, chemistry,  maths);
+
+
+            StudentDetails student = new StudentDetails(name, fatherName, DOB, gender, phoneNumber, physics, chemistry,  maths);
+
             System.Console.WriteLine($"Registration successfull. Your ID is {student.StudentID}");
             studentList.Add(student);
         }
@@ -95,12 +100,6 @@ namespace ApplicationForStudentAdmission
             }
         }
 
-<<<<<<< Updated upstream
-        
-    }
-
-}
-=======
         public static void SubMenu()
 
         {
@@ -177,7 +176,9 @@ namespace ApplicationForStudentAdmission
 
         public static void CheckEligiblity()
         {
-            bool eligiblity = currentStudent.CheckEligiblity(75.0);
+
+            bool eligiblity = currentStudent.CheckEligibility(75.0);
+
             if (eligiblity)
             {
                 System.Console.WriteLine("You are eligible for admission");
@@ -190,7 +191,11 @@ namespace ApplicationForStudentAdmission
         public static void ShowDetails()
         {
             System.Console.WriteLine($" Name:{currentStudent.Name} FatherName:{currentStudent.FatherName} Gender:{currentStudent.Gender} ");
+<<<<<<< Updated upstream
             System.Console.WriteLine($" Phone:{currentStudent.Phone} DOB:{currentStudent.DOB.ToString("dd/MM/yyyy")} ");
+=======
+            System.Console.WriteLine($" Phone:{currentStudent.PhoneNo} DOB:{currentStudent.DOB.ToString("dd/MM/yyyy")} ");
+>>>>>>> Stashed changes
             System.Console.WriteLine($"Physics:{currentStudent.Physics} Chemistry:{currentStudent.Chemistry} Maths:{currentStudent.Maths}");
 
         }
@@ -264,7 +269,9 @@ namespace ApplicationForStudentAdmission
                     if(departmentInfo.NumberOfSeats>0)
                     {
                         //yes -check he is eligible -no-not eligible to take admission
-                        if(currentStudent.CheckEligiblity(75.0))
+
+                        if(currentStudent.CheckEligibility(75.0))
+
                         {
                             int count=0;
                             //
@@ -318,4 +325,4 @@ namespace ApplicationForStudentAdmission
 
 }
 
->>>>>>> Stashed changes
+
