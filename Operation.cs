@@ -51,7 +51,11 @@ namespace ApplicationForStudentAdmission
             string fatherName = Console.ReadLine();
             
             System.Console.Write("Enter your gender (Male/Female/Transgender) : ");
+<<<<<<< Updated upstream
             Gender gender = Enum.Parse<Gender>(Console.ReadLine());
+=======
+            Gender gender = Enum.Parse<Gender>(Console.ReadLine(),true);
+>>>>>>> Stashed changes
 
             System.Console.Write("Enter your DOB in (dd/mm/yyyy) : ");
             DateTime DOB = DateTime.ParseExact(Console.ReadLine(), "dd/MM/yyyy", null);
@@ -68,7 +72,11 @@ namespace ApplicationForStudentAdmission
             System.Console.Write("Enter maths mark : ");
             int maths = int.Parse(Console.ReadLine());
 
+<<<<<<< Updated upstream
             Student student = new Student(name, fatherName, DOB, gender, phoneNumber, physics, chemistry,  maths);
+=======
+            StudentDetails student = new StudentDetails(name, fatherName, DOB, gender, phoneNumber, physics, chemistry,  maths);
+>>>>>>> Stashed changes
             System.Console.WriteLine($"Registration successfull. Your ID is {student.StudentID}");
             studentList.Add(student);
         }
@@ -96,11 +104,15 @@ namespace ApplicationForStudentAdmission
         }
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         
     }
 
 }
 =======
+=======
+
+>>>>>>> Stashed changes
         public static void SubMenu()
 
         {
@@ -177,7 +189,11 @@ namespace ApplicationForStudentAdmission
 
         public static void CheckEligiblity()
         {
+<<<<<<< Updated upstream
             bool eligiblity = currentStudent.CheckEligiblity(75.0);
+=======
+            bool eligiblity = currentStudent.CheckEligibility(75.0);
+>>>>>>> Stashed changes
             if (eligiblity)
             {
                 System.Console.WriteLine("You are eligible for admission");
@@ -190,7 +206,11 @@ namespace ApplicationForStudentAdmission
         public static void ShowDetails()
         {
             System.Console.WriteLine($" Name:{currentStudent.Name} FatherName:{currentStudent.FatherName} Gender:{currentStudent.Gender} ");
+<<<<<<< Updated upstream
             System.Console.WriteLine($" Phone:{currentStudent.Phone} DOB:{currentStudent.DOB.ToString("dd/MM/yyyy")} ");
+=======
+            System.Console.WriteLine($" Phone:{currentStudent.PhoneNo} DOB:{currentStudent.DOB.ToString("dd/MM/yyyy")} ");
+>>>>>>> Stashed changes
             System.Console.WriteLine($"Physics:{currentStudent.Physics} Chemistry:{currentStudent.Chemistry} Maths:{currentStudent.Maths}");
 
         }
@@ -264,7 +284,11 @@ namespace ApplicationForStudentAdmission
                     if(departmentInfo.NumberOfSeats>0)
                     {
                         //yes -check he is eligible -no-not eligible to take admission
+<<<<<<< Updated upstream
                         if(currentStudent.CheckEligiblity(75.0))
+=======
+                        if(currentStudent.CheckEligibility(75.0))
+>>>>>>> Stashed changes
                         {
                             int count=0;
                             //
@@ -318,4 +342,7 @@ namespace ApplicationForStudentAdmission
 
 }
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
