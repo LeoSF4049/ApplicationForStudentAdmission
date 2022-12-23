@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace College
+
+namespace ApplicationForStudentAdmission
+
 {
     public enum AdmissionStatus{select,Admitted,Cancelled}
     public class AdmissionDetails
@@ -13,7 +15,11 @@ namespace College
         public string StudentID{get;set;}
         public string DepartmentID{get;set;}
         public DateTime AdmissionDate{get;set;}
+
         public AdmissionStatus Admissionstatus{get;set;}
+
+        public AdmissionStatus AdmissionStatus{get;set;}
+
         public AdmissionDetails(string studentID,string departmentID,DateTime admissionDate,AdmissionStatus status)
         {
             s_admissionID++;
@@ -21,7 +27,11 @@ namespace College
             StudentID=studentID;
             DepartmentID=departmentID;
             AdmissionDate=admissionDate;
+
             Admissionstatus=status;
+
+            AdmissionStatus=status;
+
         }
     }
 }
